@@ -23,6 +23,13 @@ jobs:
           uses: actions/setup-node@v4
           with:
             node-version: 20
+        - name: Cache nodejs
+          uses: ylemkimon/cache-restore@v2
+          with:
+            path: ~/.npm
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
     
         - name: Install Dependencies
           run: npm install
@@ -64,6 +71,7 @@ jobs:
       
     
             
+
 
 
 
