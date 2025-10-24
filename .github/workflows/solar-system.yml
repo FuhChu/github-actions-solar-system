@@ -100,10 +100,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/{FuhChu}/solar-system:{githubSHA}
+          tags: ghcr.io/{github.UserName}/solar-system:{githubSHA}
       
     
             
+
 
 
 
